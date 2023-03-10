@@ -1,0 +1,26 @@
+MsgBox, Press F5 & F6 to save positions (where need to click). `nPress MouseM/MouseR to do click in saved position and return mouse back.`nPress F8 to exit.
+
+#CommentFlag Use F1 or other. Example MButton::(Mouse3)
+MButton:: 
+MouseGetPos, xpos, ypos 
+MouseClick, left, % xposnext, % yposnext
+MouseMove, % xpos, % ypos
+Return
+
+RButton:: 
+MouseGetPos, xpos, ypos 
+MouseClick, left, % xposnexttwo, % yposnexttwo
+MouseMove, % xpos, % ypos
+Return
+
+F5:: 
+MouseGetPos, xposnext, yposnext 
+MsgBox, Position saved!
+Return
+
+F6:: 
+MouseGetPos, xposnexttwo, yposnexttwo 
+MsgBox, Position saved!
+Return
+
+F8::ExitApp 
