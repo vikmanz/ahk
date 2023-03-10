@@ -1,0 +1,10 @@
+MButton::
+Send {click}
+Send {h}
+Send {click, down}
+return
+
+MButton Up::
+Send {click, up}
+Send {v}
+return
