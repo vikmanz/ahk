@@ -1,0 +1,70 @@
+z:: 
+MouseClick, left, %xp1%, %yp1%
+Return
+
+
+x:: 
+MouseClick, left, %xp2%, %yp2%
+Return
+
+c:: 
+MouseClick, left, %xp3%, %yp3%
+Return
+
+v:: 
+MouseClick, left, %xp4%, %yp4%
+Return
+
+s:: 
+MouseClick, left, %xp5%, %yp5%
+Return
+
+a:: 
+MouseClick, left, %xp6%, %yp6%
+Return
+
+
+
+
+F5:: 
+MouseGetPos, xp1, yp1 
+ShowMsg(1)
+Return
+
+F6:: 
+MouseGetPos, xp2, yp2 
+ShowMsg(2)
+Return
+
+F7:: 
+MouseGetPos, xp3, yp3 
+ShowMsg(3)
+Return
+
+F8:: 
+MouseGetPos, xp4, yp4
+ShowMsg(4)
+Return
+
+F9:: 
+MouseGetPos, xp5, yp5
+ShowMsg(5)
+Return
+
+F10:: 
+MouseGetPos, xp6, yp6
+ShowMsg(6)
+Return
+
+
+F12::ExitApp 
+
+
+ShowMsg(q)
+{
+message = Position %q% saved!
+Gui, Add, Text,, %message%
+Gui, Show
+Sleep 300
+Gui, Destroy
+}
