@@ -1,0 +1,20 @@
+F3:: MouseGetPos, xpos1, ypos1	; запоминаем позицию-1
+F4:: MouseGetPos, xpos2, ypos2 	; запоминаем позицию-2
+
+F5::
+Loop
+{
+Click %xpos1% %ypos1% Right 			; клик по позицию-1
+sleep 200						; пауза
+Click %xpos2%, %ypos2% 			; клик по позицию-2
+sleep 200						; пауза
+}
+return
+
+F1::			; Приостановка по F1.
+  If not Stop		;
+  {			;
+    Stop := True	;
+    Pause		;
+  }			;
+Return			;
